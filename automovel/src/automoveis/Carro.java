@@ -93,8 +93,8 @@ public class Carro extends Automovel{
     public void entradaDados(){
         Scanner sc = new Scanner(System.in);
         super.entradaDados();
-        System.out.println("Marca do automóvel:");
-        setMarca(sc.nextLine());       
+        System.out.println("Volume do porta malas:");
+        setVolumeMala(Integer.parseInt(sc.nextLine()));
     }
     
     // IMPRIMIR:
