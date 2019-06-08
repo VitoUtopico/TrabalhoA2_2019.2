@@ -1,5 +1,6 @@
 package automoveis;
 
+import java.util.Scanner;
 import motor.Motor;
 
 public class Moto extends Automovel{
@@ -85,5 +86,13 @@ public class Moto extends Automovel{
         setVolumeBagageiro(bagageiro);
     }
     
+    // ENTRADA DADOS:
+    @Override
+    public void entradaDados(){
+        Scanner sc = new Scanner(System.in);
+        super.entradaDados();
+        System.out.println("Volume do porta malas:");
+        setVolumeBagageiro(Integer.parseInt(sc.nextLine()));
+    }
     
 }
