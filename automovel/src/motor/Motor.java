@@ -60,7 +60,7 @@ public class Motor {
     public void imprimir(){
         System.out.printf("Marca do motor: %s\n", getMarca());
         System.out.printf("Tipo do combustivel: %s\n", getTipoCombustivel());
-        System.out.printf("Rotações por minuto: %d\n", getRpm());
-        System.out.printf("RPM máximo: %d\n", getRpmMaximo());
+        System.out.printf("Rotações por minuto: %d RPM\n", getRpm());
+        System.out.printf("RPM máximo: %d RPM\n", getRpmMaximo());
     }    
 }
