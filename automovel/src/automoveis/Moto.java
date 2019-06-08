@@ -95,4 +95,11 @@ public class Moto extends Automovel{
         setVolumeBagageiro(Integer.parseInt(sc.nextLine()));
     }
     
+    // IMPRIMIR:
+    @Override
+    public void imprimir(){
+        super.imprimir();
+        System.out.printf("Volume do bagageiro: %d L\n", getVolumeBagageiro());
+    }
+    
 }
