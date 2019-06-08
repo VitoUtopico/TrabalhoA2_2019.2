@@ -95,5 +95,12 @@ public class Carro extends Automovel{
         super.entradaDados();
         System.out.println("Marca do automóvel:");
         setMarca(sc.nextLine());       
-    }    
+    }
+    
+    // IMPRIMIR:
+    @Override
+    public void imprimir(){
+        super.imprimir();
+        System.out.printf("Volume do porta malas: %d L\n", getVolumeMala());
+    }
 }
