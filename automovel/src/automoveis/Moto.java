@@ -78,4 +78,12 @@ public class Moto extends Automovel{
         setPlaca(placa);      
     }
     
+    // CADASTRAR:
+    public void cadastrar(Motor motor, String proprietario, String marca,
+            String placa, int passageiros, double preco, int bagageiro){
+        super.cadastrar(motor, proprietario, marca, placa, passageiros, preco);
+        setVolumeBagageiro(bagageiro);
+    }
+    
+    
 }
