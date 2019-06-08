@@ -79,6 +79,12 @@ public class Onibus extends Automovel{
         setPlaca(placa);      
     }
 
+    // CADASTRAR:
+    public void cadastrar(Motor motor, String proprietario, String marca,
+            String placa, int passageiros, double preco, String motorista){
+        super.cadastrar(motor, proprietario, marca, placa, passageiros, preco);
+        setMotorista(motorista);
+    }
     
     
 }
