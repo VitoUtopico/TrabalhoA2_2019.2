@@ -1,4 +1,5 @@
 package automoveis;
+import java.util.Scanner;
 import motor.Motor;
 public class Onibus extends Automovel{
     private String motorista;
@@ -86,5 +87,13 @@ public class Onibus extends Automovel{
         setMotorista(motorista);
     }
     
+    // ENTRADA DADOS:
+    @Override
+    public void entradaDados(){
+        Scanner sc = new Scanner(System.in);
+        super.entradaDados();
+        System.out.println("Nome do motorista:");
+        setMotorista(sc.nextLine());
+    }
     
 }
