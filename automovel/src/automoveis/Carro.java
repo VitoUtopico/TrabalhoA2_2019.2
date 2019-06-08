@@ -81,21 +81,19 @@ public class Carro extends Automovel{
         setPlaca(placa);      
     }
     
+    // CADASTRAR:
+    public void cadastrar(Motor motor, String proprietario, String marca,
+            String placa, int passageiros, double preco, int volMala){
+        super.cadastrar(motor, proprietario, marca, placa, passageiros, preco);
+        setVolumeMala(volMala);
+    }
+    
+    // ENTRADA DADOS:
     @Override
     public void entradaDados(){
         Scanner sc = new Scanner(System.in);
         super.entradaDados();
         System.out.println("Marca do automóvel:");
-        setMarca(sc.nextLine());
-        
-    }
-    
-    public void cadastrar(Motor motor, String proprietario, String marca,
-            String placa, int passageiros, double preco, int volMala){
-        super.cadastrar(motor, proprietario, marca, placa, passageiros, preco);
-        setVolumeMala(volMala);
-        
-        
-        
-    }
+        setMarca(sc.nextLine());       
+    }    
 }

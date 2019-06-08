@@ -92,6 +92,7 @@ public class Automovel {
         setPreco(preco);        
     }
     
+    // CADASTRAR:
     public void cadastrar(Motor motor, String proprietario, String marca,
             String placa, int passageiros, double preco){
         setMotor(motor);
@@ -102,6 +103,7 @@ public class Automovel {
         setPreco(preco);
     }
     
+    // ENTRADA DADOS:
     public void entradaDados(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Dados do motor:");
@@ -117,6 +119,18 @@ public class Automovel {
         setNumeroPassageiros(Integer.parseInt(sc.nextLine()));
         System.out.println("Preço:");
         setPreco(Double.parseDouble(sc.nextLine()));
+    }
+    
+    // IMPRIMIR:
+    public void imprimir(){
+        System.out.println("Dados do motor:");
+        motor.imprimir();
+        System.out.println("Dados gerais do automóvel:");
+        System.out.printf("Marca: %s\n", getMarca());
+        System.out.printf("Nome do proprietário: %s\n", getProprietario());
+        System.out.printf("Placa: %s\n", getPlaca());
+        System.out.printf("Número de passageiros: %d\n", getNumeroPassageiros());
+        System.out.printf("Preço: R$ %.2f\n", getPreco());
     }
     
 }
