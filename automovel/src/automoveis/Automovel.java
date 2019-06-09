@@ -48,7 +48,12 @@ public class Automovel {
     public double getPreco(){
         return preco;
     }
-    
+    public int getTEMPOMAXIMOUSO(){
+        return TEMPOMAXIMOUSO;
+    }
+    public int getIDADEMINIMAMOTORISTA(){
+        return IDADEMINIMAMOTORISTA;
+    }
     // CONSTRUTORES:
     public Automovel(){}
     public Automovel(Motor motor, String proprietario, String marca,
@@ -123,6 +128,7 @@ public class Automovel {
     
     // IMPRIMIR:
     public void imprimir(){
+        System.out.println("Dados do motor:");
         System.out.println("Dados do motor:");
         motor.imprimir();
         System.out.println("Dados gerais do automóvel:");
