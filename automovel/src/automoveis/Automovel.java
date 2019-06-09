@@ -54,6 +54,7 @@ public class Automovel {
     public int getIDADEMINIMAMOTORISTA(){
         return IDADEMINIMAMOTORISTA;
     }
+    
     // CONSTRUTORES:
     public Automovel(){}
     public Automovel(Motor motor, String proprietario, String marca,
