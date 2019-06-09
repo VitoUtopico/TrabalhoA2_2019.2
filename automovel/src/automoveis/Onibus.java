@@ -96,4 +96,11 @@ public class Onibus extends Automovel{
         setMotorista(sc.nextLine());
     }
     
+    // IMPRIMIR:
+    @Override
+    public void imprimir(){
+        super.imprimir();
+        System.out.printf("Nome do motorista: %s\n", getMotorista());
+    }
+    
 }
