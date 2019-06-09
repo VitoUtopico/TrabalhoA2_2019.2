@@ -2,7 +2,7 @@ package automoveis;
 import abstratas.InterfaceAutomoveis;
 import java.util.Scanner;
 import motor.Motor;
-public class Onibus extends Automovel implements InterfaceAutomoveis{
+public abstract class Onibus extends Automovel implements InterfaceAutomoveis{
     private String motorista;
     
     // SETTER:
@@ -131,4 +131,8 @@ public class Onibus extends Automovel implements InterfaceAutomoveis{
         System.out.println("Ônibus virando a direita");
     }
     
+    @Override
+    public void desconto(int percentual){
+        super.setPreco(super.getPreco() * (1 + percentual * super.getPreco() / 100));
+    }    
 }
