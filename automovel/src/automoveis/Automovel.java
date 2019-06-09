@@ -26,6 +26,9 @@ public class Automovel {
         numeroPassageiros = passageiros;
     }
     public void setPreco(double preco){
+        if(preco <= 0){
+            throw new IllegalArgumentException("Insira um valor positivo.");
+        }
         this.preco = preco;
     }    
     

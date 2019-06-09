@@ -8,7 +8,17 @@ public abstract class Carro extends Automovel implements InterfaceAutomoveis{
     private int volumeMala;
     
     // SETTER:
+    @Override
+    public void setNumeroPassageiros(int passageiros){
+        if(passageiros > 4){
+            throw new IllegalArgumentException("O carro comporta no máximo 4 passageiros");
+        }
+        super.setNumeroPassageiros(passageiros);
+    }
     public void setVolumeMala(int mala){
+        if(mala <= 0){
+            throw new IllegalArgumentException("Insira um valor positivo.");
+        }
         volumeMala = mala;
     }
     // GETTER:

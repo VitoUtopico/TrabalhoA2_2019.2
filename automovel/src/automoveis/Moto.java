@@ -7,6 +7,14 @@ import motor.Motor;
 public abstract class Moto extends Automovel implements InterfaceAutomoveis{
     private int volumeBagageiro;
     
+    @Override
+    public void setNumeroPassageiros(int passageiros){
+        if(passageiros > 1){
+            throw new IllegalArgumentException("A moto comporta no máximo 1 passageiro");
+        }
+        super.setNumeroPassageiros(passageiros);
+    }
+    
     public void setVolumeBagageiro(int bagageiro){
         volumeBagageiro = bagageiro;
     }

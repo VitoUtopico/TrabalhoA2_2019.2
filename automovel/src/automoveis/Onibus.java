@@ -6,6 +6,13 @@ public abstract class Onibus extends Automovel implements InterfaceAutomoveis{
     private String motorista;
     
     // SETTER:
+    @Override
+    public void setNumeroPassageiros(int passageiros){
+        if(passageiros > 40){
+            throw new IllegalArgumentException("O onibus comporta no máximo 40 passageiro");
+        }
+        super.setNumeroPassageiros(passageiros);
+    }
     public void setMotorista(String motorista){
         this.motorista = motorista;
     }
