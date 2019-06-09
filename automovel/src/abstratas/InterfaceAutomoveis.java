@@ -7,4 +7,5 @@ public interface InterfaceAutomoveis {
     public abstract void virarAEsquerda();
     public abstract void virarADireita();
     public abstract void desconto();
+    public abstract void desconto(int percentual);
 }
