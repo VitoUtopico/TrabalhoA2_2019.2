@@ -1,7 +1,8 @@
 package automoveis;
+import abstratas.InterfaceAutomoveis;
 import java.util.Scanner;
 import motor.Motor;
-public class Onibus extends Automovel{
+public class Onibus extends Automovel implements InterfaceAutomoveis{
     private String motorista;
     
     // SETTER:
@@ -101,6 +102,33 @@ public class Onibus extends Automovel{
     public void imprimir(){
         super.imprimir();
         System.out.printf("Nome do motorista: %s\n", getMotorista());
+    }
+    
+    // METODOS ABSTRATOS:
+    @Override
+    public void acelerar(int acelera){
+        super.motor.setRpm(super.motor.getRpm() + acelera * 200);
+    }
+    
+    @Override
+    public void desacelerar(int desacelera){
+        super.motor.setRpm(super.motor.getRpm() - desacelera * 200);
+    }
+    
+    @Override
+    public void frear(){
+        System.out.println("O ônibus está freando!");
+    
+    }
+
+    @Override
+    public void virarAEsquerda(){
+        System.out.println("Ônibus virando a esquerda");
+    }
+    
+    @Override
+    public void virarADireita(){
+        System.out.println("Ônibus virando a direita");
     }
     
 }
