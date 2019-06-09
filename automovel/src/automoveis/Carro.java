@@ -133,8 +133,7 @@ public abstract class Carro extends Automovel implements InterfaceAutomoveis{
     }
     
     @Override
-    public void desconto(int percentual){
-        percentual = 10;
-        super.setPreco(super.getPreco() * (1 + percentual * super.getPreco() / 100));
+    public void desconto(){
+        super.setPreco(super.getPreco() * (1 + 10 * super.getPreco() / 100));
     }    
 }
