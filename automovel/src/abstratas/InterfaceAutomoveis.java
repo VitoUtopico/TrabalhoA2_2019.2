@@ -1,10 +1,10 @@
 package abstratas;
 public interface InterfaceAutomoveis {
     
-    public abstract int acelerar();
-    public abstract int desacelerar();
-    public abstract String frear();
-    public abstract String virarAEsquerda();
-    public abstract String virarSDireita();
+    public abstract void acelerar(int acelera);
+    public abstract void desacelerar(int desacelera);
+    public abstract void frear();
+    public abstract void virarAEsquerda();
+    public abstract void virarADireita();
     
 }
