@@ -3,7 +3,7 @@ import java.util.Scanner;
 import motor.Motor;
 
 public class Automovel {
-    private Motor motor;
+    public Motor motor;
     private String proprietario, marca, placa;
     private int numeroPassageiros;
     private double preco;
