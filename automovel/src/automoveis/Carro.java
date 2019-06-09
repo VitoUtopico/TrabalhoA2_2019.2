@@ -131,4 +131,10 @@ public abstract class Carro extends Automovel implements InterfaceAutomoveis{
     public void virarADireita(){
         System.out.println("Carro virando a direita");
     }
+    
+    @Override
+    public void desconto(int percentual){
+        percentual = 10;
+        super.setPreco(super.getPreco() * (1 + percentual * super.getPreco() / 100));
+    }    
 }
