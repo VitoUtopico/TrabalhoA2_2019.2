@@ -4,7 +4,7 @@ import abstratas.InterfaceAutomoveis;
 import java.util.Scanner;
 import motor.Motor;
 
-public class Moto extends Automovel implements InterfaceAutomoveis{
+public abstract class Moto extends Automovel implements InterfaceAutomoveis{
     private int volumeBagageiro;
     
     public void setVolumeBagageiro(int bagageiro){
@@ -130,4 +130,8 @@ public class Moto extends Automovel implements InterfaceAutomoveis{
         System.out.println("Moto virando a direita");
     }
     
+    @Override
+    public void desconto(int percentual){
+        super.setPreco(super.getPreco() * (1 + percentual * super.getPreco() / 100));
+    }
 }
