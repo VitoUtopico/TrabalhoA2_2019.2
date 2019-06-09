@@ -129,7 +129,8 @@ public class Automovel {
     
     // IMPRIMIR:
     public void imprimir(){
-        System.out.println("Dados do motor:");
+        System.out.printf("Tempo máximo de uso %d: \n", getTEMPOMAXIMOUSO());
+        System.out.printf("Idade mínima para conduzir: %d anos\n", getIDADEMINIMAMOTORISTA());
         System.out.println("Dados do motor:");
         motor.imprimir();
         System.out.println("Dados gerais do automóvel:");
