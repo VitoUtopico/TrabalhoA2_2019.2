@@ -1,9 +1,10 @@
 package automoveis;
 
+import abstratas.InterfaceAutomoveis;
 import java.util.Scanner;
 import motor.Motor;
 
-public class Carro extends Automovel{
+public abstract class Carro extends Automovel implements InterfaceAutomoveis{
     private int volumeMala;
     
     // SETTER:
@@ -102,5 +103,32 @@ public class Carro extends Automovel{
     public void imprimir(){
         super.imprimir();
         System.out.printf("Volume do porta malas: %d L\n", getVolumeMala());
+    }
+    
+    // METODOS ABSTRATOS:
+    @Override
+    public void acelerar(int acelera){
+        super.motor.setRpm(super.motor.getRpm() + acelera * 100);
+    }
+    
+    @Override
+    public void desacelerar(int desacelera){
+        super.motor.setRpm(super.motor.getRpm() - desacelera * 100);
+    }
+    
+    @Override
+    public void frear(){
+        System.out.println("O carro está freando!");
+    
+    }
+
+    @Override
+    public void virarAEsquerda(){
+        System.out.println("Carro virando a esquerda");
+    }
+    
+    @Override
+    public void virarADireita(){
+        System.out.println("Carro virando a direita");
     }
 }
