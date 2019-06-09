@@ -133,6 +133,9 @@ public abstract class Onibus extends Automovel implements InterfaceAutomoveis{
     
     @Override
     public void desconto(int percentual){
+        if (percentual < 5 || percentual > 70){
+            throw new IllegalArgumentException("Desconto negado");
+        }
         super.setPreco(super.getPreco() * (1 + percentual * super.getPreco() / 100));
     }    
 }
