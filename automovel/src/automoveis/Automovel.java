@@ -27,7 +27,7 @@ public class Automovel {
     }
     public void setPreco(double preco){
         if(preco <= 0){
-            throw new IllegalArgumentException("Insira um valor positivo.");
+            throw new IllegalArgumentException("Insira um valor positivo!!!!\n\n");
         }
         this.preco = preco;
     }    
@@ -129,10 +129,24 @@ public class Automovel {
         System.out.println("Preço:");
         setPreco(Double.parseDouble(sc.nextLine()));
     }
+    public void entradaDados(Motor motor){        
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Dados do automóvel:");
+        System.out.println("Marca do automóvel:");
+        setMarca(sc.nextLine());
+        System.out.println("Nome do proprietário:");
+        setProprietario(sc.nextLine());
+        System.out.println("Placa:");
+        setPlaca(sc.nextLine());
+        System.out.println("Número de passageiros:");
+        setNumeroPassageiros(Integer.parseInt(sc.nextLine()));
+        System.out.println("Preço:");
+        setPreco(Double.parseDouble(sc.nextLine()));        
+    }
     
     // IMPRIMIR:
     public void imprimir(){
-        System.out.printf("Tempo máximo de uso %d: \n", getTEMPOMAXIMOUSO());
+        System.out.printf("Tempo máximo de uso: %d \n", getTEMPOMAXIMOUSO());
         System.out.printf("Idade mínima para conduzir: %d anos\n", getIDADEMINIMAMOTORISTA());
         System.out.println("Dados do motor:");
         motor.imprimir();

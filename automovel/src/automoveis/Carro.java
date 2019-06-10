@@ -28,6 +28,9 @@ public class Carro extends Automovel implements InterfaceAutomoveis{
     
     // CONSTRUTORES:
     public Carro(){}
+    public Carro(Motor motor){
+        setMotor(motor);
+    }
     public Carro(String marca){
         setMarca(marca);        
     }
@@ -37,6 +40,11 @@ public class Carro extends Automovel implements InterfaceAutomoveis{
     public Carro(Motor motor, String proprietario, String marca,
             String placa, int passageiros, double preco){
         super(motor, proprietario, marca, placa, passageiros, preco);
+    }
+    public Carro(Motor motor, String proprietario, String marca,
+            String placa, int passageiros, double preco, int mala){
+        super(motor, proprietario, marca, placa, passageiros, preco);
+        setVolumeMala(mala);
     }
     public Carro(String proprietario, String marca,String placa, 
             int passageiros, double preco, int mala){
@@ -96,10 +104,34 @@ public class Carro extends Automovel implements InterfaceAutomoveis{
     // ENTRADA DADOS:
     @Override
     public void entradaDados(){
+        try{
         Scanner sc = new Scanner(System.in);
         super.entradaDados();
         System.out.println("Volume do porta malas:");
         setVolumeMala(Integer.parseInt(sc.nextLine()));
+       }
+        catch(NumberFormatException number){
+            System.out.println("O campo deve conter apenas números:");
+            entradaDados();
+            
+        }        
+    }
+    @Override
+    public void entradaDados(Motor motor){
+        try{
+        Scanner sc = new Scanner(System.in);
+        super.entradaDados(motor);
+        System.out.println("Volume do porta malas:");
+        setVolumeMala(Integer.parseInt(sc.nextLine()));
+       }
+        catch(NumberFormatException number){
+            System.out.println("O campo deve conter apenas números!!!!\n\n");
+            entradaDados(motor);
+        }
+        catch(IllegalArgumentException ilegal){
+            System.out.println("O carro comporta no máximo 4 passageiros\n\n");
+            entradaDados(motor);
+        }
     }
     
     // IMPRIMIR:
@@ -138,6 +170,6 @@ public class Carro extends Automovel implements InterfaceAutomoveis{
     
     @Override
     public void desconto(){
-        super.setPreco(super.getPreco() * (1 + 10 * super.getPreco() / 100));
+        super.setPreco(super.getPreco() - .1 * super.getPreco());
     }    
 }
