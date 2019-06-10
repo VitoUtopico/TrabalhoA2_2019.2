@@ -4,7 +4,7 @@ import abstratas.InterfaceAutomoveis;
 import java.util.Scanner;
 import motor.Motor;
 
-public abstract class Carro extends Automovel implements InterfaceAutomoveis{
+public class Carro extends Automovel implements InterfaceAutomoveis{
     private int volumeMala;
     
     // SETTER:
@@ -35,14 +35,8 @@ public abstract class Carro extends Automovel implements InterfaceAutomoveis{
        setVolumeMala(mala);
     }
     public Carro(Motor motor, String proprietario, String marca,
-            String placa, int passageiros, double preco, int mala){
-        setMotor(motor);
-        setProprietario(proprietario);
-        setMarca(marca);
-        setPlaca(placa);
-        setNumeroPassageiros(passageiros);
-        setPreco(preco);
-        setVolumeMala(mala);        
+            String placa, int passageiros, double preco){
+        super(motor, proprietario, marca, placa, passageiros, preco);
     }
     public Carro(String proprietario, String marca,String placa, 
             int passageiros, double preco, int mala){

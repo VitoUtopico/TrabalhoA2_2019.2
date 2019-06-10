@@ -2,7 +2,7 @@ package automoveis;
 import abstratas.InterfaceAutomoveis;
 import java.util.Scanner;
 import motor.Motor;
-public abstract class Onibus extends Automovel implements InterfaceAutomoveis{
+public class Onibus extends Automovel implements InterfaceAutomoveis{
     private String motorista;
     
     // SETTER:
@@ -139,7 +139,10 @@ public abstract class Onibus extends Automovel implements InterfaceAutomoveis{
     }
     
     @Override
-    public void desconto(int percentual){
+    public void desconto(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Insira o percentual de desconto:");
+        int percentual = Integer.parseInt(sc.nextLine());
         if (percentual < 5 || percentual > 70){
             throw new IllegalArgumentException("Desconto negado");
         }
